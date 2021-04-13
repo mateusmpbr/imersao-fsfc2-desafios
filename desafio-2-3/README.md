@@ -1,4 +1,4 @@
-## Desafios 2 e 3
+# Desafios 2 e 3
 
 ## Desafio 2 - Backend e frontend
 ### Informações do desafio
