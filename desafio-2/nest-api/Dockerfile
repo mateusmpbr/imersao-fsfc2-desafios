@@ -10,4 +10,4 @@ RUN npm install --silent
 
 COPY . .
 
-CMD ["npm", "run", "start:dev"]
+ENTRYPOINT [ ".docker/entrypoint.sh" ]
