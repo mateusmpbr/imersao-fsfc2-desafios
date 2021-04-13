@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  desafio-1:
+    image: mateusmpbr/desafio-1
+    ports:
+      - "8000:8000"
