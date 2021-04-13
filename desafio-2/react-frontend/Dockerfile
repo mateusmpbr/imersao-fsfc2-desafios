@@ -9,5 +9,3 @@ COPY package*.json ./
 RUN npm install --silent
 
 COPY . .
-
-ENTRYPOINT [ ".docker/entrypoint.sh" ]
