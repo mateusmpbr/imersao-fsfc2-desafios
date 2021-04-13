@@ -2,6 +2,6 @@ version: '3'
 
 services:
   desafio-1:
-    image: mateusmpbr/desafio-1
+    image: mateusmpbr/fsfc2-desafio1
     ports:
       - "8000:8000"
