@@ -1,6 +1,6 @@
 # Desafios 2 e 3
 
-## Desafio 2 - Backend e frontend
+## Desafio 2 - Backend e Frontend
 ### Informações do desafio
 Nesse desafio você trabalhará com backend e frontend juntos para consolidar os conhecimentos adquiridos nas aulas de Nest.js e React.js.
 
