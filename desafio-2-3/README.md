@@ -17,7 +17,7 @@ Para isso:
 - O endpoint http://localhost:3000/routes precisa retornar 5 rotas com os seguintes dados: title - título da rota, startPosition - contém latitude e longitude, endPosition - contém latitude e longitude
 
 ### Como configurar
-- Executar no terminal: `docker-compose up -d`
+- Abrir o terminal na pasta `desafio-2-3` e executar: `docker-compose up -d`
 
 ### Como acessar
 - Em algum navegador:
@@ -31,7 +31,21 @@ Nesse desafio, você deverá gerar os manifestos yaml do Kubernetes (deployment 
 Você NÃO precisa utilizar um Cloud Provider como AWS, GCP e Azure para realizar essa tarefa. Você pode realizar localmente a instalação do cluster utilizando o Kind (https://kind.sigs.k8s.io/).
 
 ### Como configurar
-- A fazer
+- Instalar Kind: [https://kind.sigs.k8s.io/docs/user/quick-start](https://kind.sigs.k8s.io/docs/user/quick-start)
+
+-  Abrir o terminal na pasta `desafio-2-3` e executar:
+    - `kind create cluster`
+    - `kubectl cluster-info --context kind-kind`
+    - `kubectl apply -f k8s/backend/deploy.yaml -f k8s/backend/service.yaml`
+        - OBS: Só prosseguir para o comando abaixo, quando o comando `kubectl get pods` retornar status `Running` para o pod em questão
+    - `kubectl port-forward service/backend-service 3000:3000`
+
+- Abrir outro terminal (também na pasta `desafio-2-3`) e executar:
+    - `kubectl apply -f k8s/frontend/deploy.yaml -f k8s/frontend/service.yaml`
+        - OBS: Só prosseguir para o comando abaixo, quando o comando `kubectl get pods` retornar status `Running` para o pod em questão
+    - `kubectl port-forward service/frontend-service 3001:3001`
 
 ### Como acessar
-- A fazer
+- Em algum navegador:
+    - Para visualizar o endpoint "routes" do Nest.js, acessar: `http://localhost:3000/routes`
+    - Para visualizar a aplicação React, acessar: `http://localhost:3001`

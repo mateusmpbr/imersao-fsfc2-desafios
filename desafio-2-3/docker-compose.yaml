@@ -3,14 +3,14 @@ version: '3'
 services:
   backend:
     build: nest-api
-    entrypoint: ./.docker/entrypoint.sh
+    image: mateusmpbr/fsfc2-desafio2-3_backend
     ports:
       - "3000:3000"
     volumes:
       - ./nest-api:/usr/src/app
   frontend:
     build: react-frontend
-    entrypoint: ./.docker/entrypoint.sh
+    image: mateusmpbr/fsfc2-desafio2-3_frontend
     ports:
       - "3001:3000"
     volumes:

@@ -1,5 +1,5 @@
-#!/bin/sh
-
-npm install
+#!/bin/bash
 
 npm run start:dev
+
+tail -f /dev/null
