@@ -1,5 +1,9 @@
 #!/bin/bash
 
-npm run start:dev
+if [ ! -d "node_modules" ]; then
+    npm install
+fi
+
+npm start
 
 tail -f /dev/null
